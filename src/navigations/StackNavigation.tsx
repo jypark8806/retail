@@ -1,5 +1,6 @@
 import { createStackNavigator } from "@react-navigation/stack";
-import { home } from "../screens/home"
+import { home } from "../screens/home";
+import React from 'react';
 
 const Stack = createStackNavigator();
 export function StackNavigation(props: any){
