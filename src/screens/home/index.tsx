@@ -1,12 +1,14 @@
+/* eslint-disable prettier/prettier */
 import React from 'react';
-import { Text, View } from "react-native";
+import {Text, View} from "react-native";
 
 export const home = (props: any) => {
     return (
         <View style={{flex: 1}}>
-            {/* header */}
             {/* main */}
-            {/* footer */}
+            {/* 진행공연 */}
+            {/* 예정공연 */}
+            {/* bottomTab */}
         </View>
     )
 }
