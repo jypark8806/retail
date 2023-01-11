@@ -1,3 +1,3 @@
-import SearchButton from 'components/button/SearchButton';
+import SearchButton from 'Components/button/SearchButton';
 
 export {SearchButton};

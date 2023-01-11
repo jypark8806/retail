@@ -4,8 +4,8 @@
 import {createStackNavigator} from '@react-navigation/stack';
 import {home} from '../screens/home';
 import React from 'react';
-import { SearchButton } from 'components/button';
-import Logo from 'components/logo';
+import { SearchButton } from '../Components/button/index';
+import Logo from '../Components/logo/index';
 
 const Stack = createStackNavigator();
 export function StackNavigation() {
