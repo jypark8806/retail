@@ -26,6 +26,7 @@ const CommonFlatList = () => {
                 data={ datas}
                 renderItem={ renderingItem}
                 horizontal={ true}
+                showsHorizontalScrollIndicator={ false}
             />
         </View>
     )
