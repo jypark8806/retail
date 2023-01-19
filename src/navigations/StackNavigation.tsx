@@ -4,8 +4,8 @@
 import {createStackNavigator} from '@react-navigation/stack';
 import {home} from '../screens/home';
 import React from 'react';
-import { SearchButton } from '../Components/button/index';
-import Logo from '../Components/logo/index';
+import { SearchButton } from '../components/button/index';
+import Logo from '../components/logo/index';
 
 const Stack = createStackNavigator();
 export function StackNavigation() {
@@ -14,15 +14,10 @@ export function StackNavigation() {
             <Stack.Screen
                 name="home"
                 component={home}
-                options={({navigation: any}) => ({
-                    title: '',
-                    headerLeft: () => (
-                        <Logo />
-                    ),
-                    headerRight: () => (
-                        <SearchButton />
-                    )
-                  })}
+                options={{
+                    headerTitle: ()=> (<Logo/>),
+                    headerRight:() => (<SearchButton/>),
+                  }}
             />
         </Stack.Navigator>
     )

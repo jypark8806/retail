@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
 import {Text, View} from "react-native";
-import CommonFlatList from '../../Components/CommonFlatList';
+import CommonFlatList from '../../components/CommonFlatList';
 
 export const home = (props: any) => {
     return (

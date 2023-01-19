@@ -10,9 +10,8 @@
 
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
-// import {Provider} from 'react-redux';
-// import {store} from './src/store/Config';
 import {StackNavigation} from './src/navigations';
+import BottomTabNavigator from 'screens/BottomTab';
 
 const App = () => {
   // const isDarkMode = useColorScheme() === 'dark';
@@ -20,11 +19,11 @@ const App = () => {
   // const backgroundStyle = {
   //   backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   // };
-
   return (
     // <Provider store={store}>
     <NavigationContainer>
-      <StackNavigation />
+      {/* <StackNavigation /> */}
+      <BottomTabNavigator />
     </NavigationContainer>
     // </Provider>
   );
