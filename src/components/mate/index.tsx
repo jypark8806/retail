@@ -11,6 +11,5 @@ export function Mate(){
         <View>
             <Text>공연메이트</Text>
         </View>
-        
     )
 }
