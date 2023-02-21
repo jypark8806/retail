@@ -9,9 +9,16 @@ import {Like} from '../components/like';
 import {Mate} from '../components/mate';
 import {home} from './home';
 import Logo from 'components/logo';
-import {SearchButton} from 'components/button';
+import { SearchButton } from 'components/button';
 import { Text, TouchableOpacity, View } from 'react-native';
-import {Icon} from '@rneui/themed';
+import { Icon } from '@rneui/themed';
+
+const iconNames: any = {
+ Info: 'info',
+ Like: '',
+ Mate: 'home',
+ MyPage: 'home'
+}
 
 const BottomTabBar = ({state, descriptors, navigation}: any) => {
   return (
@@ -59,7 +66,8 @@ const BottomTabBar = ({state, descriptors, navigation}: any) => {
               onLongPress={onLongPress}
               style={{ flex: 1}}
             >
-              <Icon name="home" />
+
+              <Icon name={iconNames[route.name]} />
               <Text style={{ textAlign: 'center', color: isFocused ? '#673ab7' : '#222' }}>
                 {label}
               </Text>
