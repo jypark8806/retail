@@ -24,7 +24,7 @@ export const home = (props: any) => {
     return (
         <View style={{flex: 1}}>
             {/* main */}
-            <View style={{width: '100%', height: 250, backgroundColor: '#fff'}}>
+            <View style={{flexDirection: 'row', width: '100%', height: 250, backgroundColor: '#fff'}}>
                 <MainList dataList={tempMainDataList} />
             </View>
             {/* 진행공연 */}
