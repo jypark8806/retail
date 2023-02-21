@@ -1,8 +1,9 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import {ScrollView, Text, View} from "react-native";
+import {Dimensions, ScrollView, StyleSheet, Text, View} from "react-native";
 import { CommonFlatList} from '../../components/list';
 import { MainList } from '../../components/list';
+import { ContinuedShow, IntendedShow} from '../home/const';
 
 const tempMainDataList = [
     {name: 'test1'},
@@ -22,15 +23,38 @@ const tempFlatListDatas: any = [
 
 export const home = (props: any) => {
     return (
-        <View style={{flex: 1}}>
-            {/* main */}
-            <View style={{flexDirection: 'row', width: '100%', height: 250, backgroundColor: '#fff'}}>
-                <MainList dataList={tempMainDataList} />
-            </View>
-            {/* 진행공연 */}
-            <CommonFlatList dataList={ tempFlatListDatas} />
-            {/* 예정공연 */}
-            {/* bottomTab */}
+        <View style={{flex: 1, backgroundColor: '#fff'}}>
+            <ScrollView showsVerticalScrollIndicator = { false}>
+                {/* main */}
+                <View style={{flexDirection: 'row', width: '100%', height: 250, backgroundColor: '#fff'}}>
+                    <MainList dataList={tempMainDataList} />
+                </View>
+                {/* 진행공연 */}
+                <View style={ homeStyle.showListContainer}>
+                    <Text style={ homeStyle.tItleStyle}>{ ContinuedShow}</Text>
+                    <CommonFlatList dataList={ tempFlatListDatas} />
+                </View>
+                {/* 예정공연 */}
+                <View style={ homeStyle.showListContainer}>
+                    <Text style={ homeStyle.tItleStyle}>{ IntendedShow}</Text>
+                    <CommonFlatList dataList={ tempFlatListDatas} />
+                </View>
+                {/* bottomTab */}
+            </ScrollView>
         </View>
     )
 }
+
+const homeStyle = StyleSheet.create({
+    showListContainer: {
+        borderWidth:1, 
+        borderColor:'#eee', 
+        paddingTop:10
+    },
+    tItleStyle: {
+        width:100, 
+        textAlign:'center', 
+        fontWeight:'600', 
+        fontSize:16,
+    }
+})
