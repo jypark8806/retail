@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
 import {ScrollView, Text, View} from "react-native";
-import CommonFlatList from '../../components/CommonFlatList';
+import { CommonFlatList} from '../../components/list';
 import { MainList } from '../../components/list';
 
 const tempMainDataList = [
