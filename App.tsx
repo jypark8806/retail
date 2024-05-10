@@ -12,6 +12,7 @@ import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {StackNavigation} from './src/navigations';
 import BottomTabNavigator from 'screens/BottomTab';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 const App = () => {
   // const isDarkMode = useColorScheme() === 'dark';
@@ -21,10 +22,12 @@ const App = () => {
   // };
   return (
     // <Provider store={store}>
-    <NavigationContainer>
-      {/* <StackNavigation /> */}
-      <BottomTabNavigator />
-    </NavigationContainer>
+    <GestureHandlerRootView>
+      <NavigationContainer>
+        {/* <StackNavigation /> */}
+        <BottomTabNavigator />
+      </NavigationContainer>
+    </GestureHandlerRootView>
     // </Provider>
   );
 };
